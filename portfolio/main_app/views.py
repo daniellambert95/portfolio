@@ -10,9 +10,7 @@ from django.core.mail import send_mail
 
 def index(request):
     
-    contact_form = ContactForm
     if request.method == 'POST':
-        print("Hello")
         form = ContactForm(data=request.POST)
         if form.is_valid():
             name = request.POST.get('name')
@@ -21,7 +19,7 @@ def index(request):
             message = request.POST.get('message')
             
             message = f'''{message}\n\n
-{name} sent you this email via your portfolio contact form, respond to them via - {from_email}
+            {name} sent you this email via your portfolio contact form, respond to them via - {from_email}
             '''
 
             send_mail( subject, message, from_email, ['danjlambert95@gmail.com'], fail_silently=False)

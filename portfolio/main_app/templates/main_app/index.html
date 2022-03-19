@@ -24,7 +24,7 @@
     <div class="home_page"> 
         <nav>
             <div class="navigation">
-                <a href="portfolio.html"> <img src="{% static 'main_app/images/Logo.svg' %}" alt="Logo for portfolio"></a>
+                <a href="{% url 'home_page' %}"> <img src="{% static 'main_app/images/Logo.svg' %}" alt="Logo for portfolio"></a>
                 <ul>
                     <li> <a href="#">Home</a> </li>
                     <li> <a href="#project">Projects</a> </li>
@@ -154,11 +154,9 @@
         </div>
         <div class="project_container">
             <img id="temp" src="{% static 'main_app/images/project_images/loading_image.png' %}" alt="">
-            <h3>Django Ecommerce Store</h3>
-            <p>This is a work in progress.</p>
-            <br>
-            <br>
-            <p><b> Python - Django</b></p>
+            <h3>Covid cases Ireland</h3>
+            <p>A dataframes representation of the current covid cases in Ireland. Data taken via an api and represented with barcharts for easier readability</p>
+            <p><b> Python - Pandas - Streamlit</b></p>
             <div class="buttons">
                 <a id="button_main" href="https://daniels-first-django-blog.herokuapp.com/" target="blank"> Website</a>
                 <a id="button" href="https://daniels-first-django-blog.herokuapp.com/" target="blank"> Code</a>                
